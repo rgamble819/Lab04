@@ -33,9 +33,43 @@ public class AnimalTest
     	Assert.assertEquals(name, animal.getName());
     	Assert.assertEquals(color, animal.getColor());
     	Assert.assertEquals(weight, animal.getWeight());
-    	Assert.assertEquals(height, animal.getWeight());
+    	Assert.assertEquals(height, animal.getHeight());
     }
     // TODO: test full constructor, getters, and toString
-
+    public void getColorTest() throws AssertException 
+    {
+    	String color = "Purple";
+    	Animal animal = new Animal("Purple", "Bill", 50.0, 2.0);
+    	Assert.assertEquals(color, animal.getColor());
+    }
+    
+    public void getNameTest() throws AssertException 
+    {
+    	String color = "Purple";
+    	Animal animal = new Animal("Purple", "Bill", 50.0, 2.0);
+    	Assert.assertEquals(color, animal.getColor());
+    }
+    
+    public void getHeightTest() throws AssertException 
+    {
+    	double height = 2.0;
+    	Animal animal = new Animal("Purple", "Bill", 50.0, 2.0);
+    	Assert.assertEquals(height, animal.getHeight());
+    }
+    
+    public void getWeightTest() throws AssertException 
+    {
+    	double weight = 50.0;
+    	Animal animal = new Animal("Purple", "Bill", 50.0, 2.0);
+    	Assert.assertEquals(weight, animal.getWeight());
+    }
+    
+    public void toStringTest() throws AssertException
+    {	
+    	String toString = "Bill, a Purple-colored animal. 50.0 pounds, 2.0 inches\n";
+    	
+    	Animal animal = new Animal("Purple", "Bill", 50.0, 2.0);
+    	Assert.assertEquals(toString, animal.toString());
+    }
 }
 
