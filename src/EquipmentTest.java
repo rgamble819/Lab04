@@ -16,6 +16,16 @@ public class EquipmentTest
 		Assert.assertEquals(weight, eq1.getTotalWeight());
 		Assert.assertEquals(price, eq1.getTotalPrice());
 		Assert.assertEquals(description, eq1.getDescription());
+	}
+	
+	public void equalsEquipmentTest() throws AssertException 
+	{
+		String testLineOne = "ThrowingKnife/12,10.0,50.0,A throwing weapon";
+		String testLineTwo = "Unkown/-1,-1.0,-1.0,NoDesc";
+		Equipment eq1 = new Equipment(testLineOne);
+		Equipment eq2 = new Equipment(testLineTwo);
 		
+		Assert.assertEquals(true, eq1.equals(new Equipment(testLineOne)));
+		Assert.assertEquals(false, eq1.equals(eq2));
 	}
 }
