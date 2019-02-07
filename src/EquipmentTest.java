@@ -28,4 +28,20 @@ public class EquipmentTest
 		Assert.assertEquals(true, eq1.equals(new Equipment(testLineOne)));
 		Assert.assertEquals(false, eq1.equals(eq2));
 	}
+	
+	public void toStringTest() throws AssertException 
+	{
+		String name = "ThrowingKnife";
+		int count = 12;
+		double weight = 10.0;
+		double price = 50.0;
+		String description = "A throwing weapon";
+		String toString = String.format("Name: %s, Number: %d, Weight: %.2f lbs, Price: $%.2f - %s",
+                name, count, weight, price, description);
+		
+		String testLineOne = "ThrowingKnife/12,10.0,50.0,A throwing weapon";
+		Equipment eq1 = new Equipment(testLineOne);
+		
+		Assert.assertEquals(toString, eq1.toString());
+	}
 }
