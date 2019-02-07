@@ -44,4 +44,44 @@ public class EquipmentTest
 		
 		Assert.assertEquals(toString, eq1.toString());
 	}
+	
+	public void getNameTest() throws AssertException 
+	{
+		String name = "ThrowingKnife";
+		Equipment eq1 = new Equipment("ThrowingKnife/12,10.0,50.0,A throwing weapon");
+		
+		Assert.assertEquals(name, eq1.getName());
+	}
+	
+	public void getCountTest() throws AssertException 
+	{
+		int count = 12;
+		Equipment eq1 = new Equipment("ThrowingKnife/12,10.0,50.0,A throwing weapon");
+		
+		Assert.assertEquals(count, eq1.getCount());
+	}
+	
+	public void getWeightTest() throws AssertException 
+	{
+		double weight = 10.0;
+		Equipment eq1 = new Equipment("ThrowingKnife/12,10.0,50.0,A throwing weapon");
+		
+		Assert.assertEquals(weight, eq1.getTotalWeight());
+	}
+	
+	public void getPriceTest() throws AssertException 
+	{
+		double price = 50.0;
+		Equipment eq1 = new Equipment("ThrowingKnife/12,10.0,50.0,A throwing weapon");
+		
+		Assert.assertEquals(price, eq1.getTotalPrice());
+	}
+	
+	public void getDescriptionTest() throws AssertException 
+	{
+		String description = "A throwing weapon";
+		Equipment eq1 = new Equipment("ThrowingKnife/12,10.0,50.0,A throwing weapon");
+		
+		Assert.assertEquals(description, eq1.getDescription());
+	}
 }
